@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>El Diacho de Tips - Apostas</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
+  header {
+    background-color: #d32f2f;
+    padding: 20px;
+    text-align: center;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #222;
+  }
+  nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+  }
+  nav a:hover {
+    background-color: #444;
+  }
+  .hero {
+    text-align: center;
+    padding: 40px;
+    background-image: url('imagem-inteligencia-artificial.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  .form-container {
+    padding: 20px;
+    background-color: #111;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 10px;
+  }
+  .form-container h2 {
+    text-align: center;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  .form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .form-group button:hover {
+    background-color: #b71c1c;
+  }
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #111;
+    margin-top: 40px;
+  }
+  #usuarios-cadastrados {
+    max-width: 400px;
+    margin: 10px auto 30px auto;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    color: #ddd;
+  }
+  #usuarios-cadastrados h3 {
+    margin-top: 0;
+    text-align: center;
+  }
+  #usuarios-cadastrados ul {
+    list-style: none;
+    padding-left: 0;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  #usuarios-cadastrados li {
+    padding: 5px 0;
+    border-bottom: 1px solid #444;
+  }
+
+  /* Estilo para a seção do Chute Milionário */
+  #chute-milionario {
+    display: none;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  #chute-milionario h1 {
+    color: gold;
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px gold;
+  }
+  #chute-milionario .btn-group {
+    margin: 20px 0 40px;
+  }
+  #chute-milionario .btn {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 0 10px;
+    border-radius: 6px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 140px;
+  }
+  #chute-milionario .btn:hover {
+    background-color: #b71c1c;
+  }
+  #chute-milionario .message {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    color: #eee;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 0 5px #d32f2f;
+  }
+  #chute-milionario footer {
+    margin-top: 60px;
+    color: #777;
+    font-size: 0.9em;
+  }
+  #chute-milionario .bottom-buttons {
+    margin-top: 30px;
+  }
+  #chute-milionario .bottom-buttons .btn {
+    min-width: 180px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>El Diacho de Tips</h1>
+</header>
+<nav>
+  <a href="#">Início</a>
+  <a href="#">Esportes</a>
+  <a href="#">Ao Vivo</a>
+  <a href="#cadastro">Cadastrar-se</a>
+  <a href="#">Cassino</a>
+</nav>
+
+<div class="hero">
+  <h2>Aposte com Inteligência</h2>
+  <p>Encontre as melhores oportunidades com IA</p>
+</div>
+
+<!-- Área de Login e Cadastro -->
+<div id="login-cadastro-area">
+  <div class="form-container">
+    <h2>Login</h2>
+    <form id="login-form">
+      <div class="form-group">
+        <label for="usuario">Usuário</label>
+        <input type="text" id="usuario" name="usuario" required />
+      </div>
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" required />
+      </div>
+      <div class="form-group">
+        <button type="submit">Entrar</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="cadastro" class="form-container">
+    <h2>Criar Conta</h2>
+    <form id="cadastro-form">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required />
+      </div>
+      <div class="form-group">
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" required />
+      </div>
+      <div class="form-group">
+        <label for="data-nascimento">Data de Nascimento</label>
+        <input type="date" id="data-nascimento" name="data-nascimento" required />
+      </div>
+      <div class="form-group">
+        <label for="nova-senha">Senha</label>
+        <input type="password" id="nova-senha" name="nova-senha" required />
+      </div>
+      <div class="form-group">
+        <button type="submit">Cadastrar</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="usuarios-cadastrados">
+    <h3>Usuários cadastrados</h3>
+    <ul id="lista-usuarios"></ul>
+  </div>
+</div>
+
+<!-- Área do Chute Milionário (escondida inicialmente) -->
+<div id="chute-milionario">
+  <h1>Chute Milionário</h1>
+
+  <div class="btn-group">
+    <a href="https://t.me/seu_telegram_vip" target="_blank" class="btn">Telegram VIP</a>
+    <a href="https://t.me/seu_telegram_free" target="_blank" class="btn">Telegram Free</a>
+  </div>
+
+  <div class="message">
+    Seja bem-vindo ao Chute Milionário! Aqui você encontra as melhores dicas e análises para apostar com inteligência e aumentar suas chances de ganhar.
+  </div>
+
+  <div class="bottom-buttons">
+    <button class="btn" onclick="alert('Buscando último resultado...')">Buscar Último Resultado</button>
+    <button class="btn" onclick="alert('Analisando ao vivo...')">Analisar Ao Vivo</button>
+  </div>
+
+  <footer>
+    Criado por Niel Lima
+  </footer>
+</div>
+
+<footer>
+  <p>&copy; 2025 El Diacho de Tips Apostas</p>
+</footer>
+
+<script>
+  // Função para pegar usuários do localStorage ou criar array vazio
+  function pegarUsuarios() {
+    const usuariosJSON = localStorage.getItem('usuarios');
+    return usuariosJSON ? JSON.parse(usuariosJSON) : [];
+  }
+
+  // Função para salvar usuários no localStorage
+  function salvarUsuarios(usuarios) {
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+  }
+
+  // Atualiza a lista visível de usuários cadastrados
+  function atualizarListaUsuarios() {
+    const lista = document.getElementById('lista-usuarios');
+    const usuarios = pegarUsuarios();
+
+    lista.innerHTML = '';
+    if (usuarios.length === 0) {
+      lista.innerHTML = '<li>Nenhum usuário cadastrado ainda.</li>';
+      return;
+    }
+
+    usuarios.forEach(user => {
+      const li = document.create
